@@ -1,0 +1,39 @@
+@import "_common.sass"
+
+$purple: rgb(56, 51, 131)
+
+footer 
+    background-color: $purple
+
+    .footer-groups_wrap 
+        display: flex
+        padding-bottom: 40px
+        border-bottom: 1px solid #f2f2f2
+        width: 100%
+            
+        .footer-groups_item1, .footer-groups_item2
+            display: flex
+            width: 50%
+            margin: 40px auto 0
+
+
+        @media screen and (min-width: 319px)
+            flex-direction: column
+
+            .footer-groups_item1, .footer-groups_item2
+                flex-direction: column
+
+        @media screen and (min-width: 640px)
+            flex-direction: row
+            justify-content: space-between
+
+            .footer-groups_item1, .footer-groups_item2
+                flex-direction: row
+                justify-content: space-evenly
+    
+    .rights
+        color: #fff
+        display: flex
+        width: 100%
+        justify-content: space-between
+        padding: 30px 0
