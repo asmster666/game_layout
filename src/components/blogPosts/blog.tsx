@@ -10,9 +10,9 @@ const Blog = () => {
             <div className="container_wrap">
                 <Title text={'Latest Blog Posts'} />
                 <div className="blogs_wrap">
-                    <BlogPost img={''} title={'Portable Fashion for women'} date={'13th Dec'} likes={15} comments={10} />
-                    <BlogPost img={''} title={'Portable Fashion for women'} date={'8th Apr'} likes={67} comments={40} />
-                    <BlogPost img={''} title={'Portable Fashion for women'} date={'3rd June'} likes={32} comments={43} />
+                    <BlogPost title={'Portable Fashion for women'} date={'13th Dec'} likes={15} comments={10} />
+                    <BlogPost title={'Portable Fashion for women'} date={'8th Apr'} likes={67} comments={40} />
+                    <BlogPost title={'Portable Fashion for women'} date={'3rd June'} likes={32} comments={43} />
                 </div>
             </div>
         </div>

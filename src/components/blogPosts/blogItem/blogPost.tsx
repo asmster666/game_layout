@@ -2,10 +2,10 @@ import React from 'react';
 
 import './blogItem.sass';
 
-const BlogPost = (props: {img: string, title: string, date: string, likes: number, comments: number}) => {
+const BlogPost = (props: { title: string, date: string, likes: number, comments: number}) => {
     return (
         <div className="blog-post">
-            <img alt=""/>
+            <div className="blog-img"></div>
             <p className="blog-title"><strong>{props.title}</strong></p>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.

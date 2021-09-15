@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './reviews.sass';
+
 const Reviews = () => {
     return (
         <div className="reviews_block">  

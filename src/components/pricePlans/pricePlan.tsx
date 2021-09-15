@@ -2,6 +2,8 @@ import React from 'react';
 import PriceItem from './priceItem/priceItem';
 import Title from '../blockTitle/blockTitle';
 
+import './pricePlan.sass';
+
 const PricePlan = () => {
     return (
         <div className="price-plan_block">

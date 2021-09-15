@@ -1,0 +1,11 @@
+@import "_common.sass"
+
+.prices_container
+    display: flex
+
+    @media screen and (min-width: 319px)
+        flex-direction: column
+        margin: 20px auto
+    @media screen and (min-width: 640px)
+        flex-direction: row
+        justify-content: space-between

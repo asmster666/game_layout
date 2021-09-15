@@ -1,11 +1,13 @@
 import React from 'react';
 
+import './header.sass';
+
 export default function Header(): JSX.Element {
     return (
         <header>
             <div className="header_block1">
                 <div className="container_wrap">
-                    <img alt="header_logo"/>
+                    <img src="../../img/logo.png" alt="header_logo"/>
                     
                     <nav>
                         <a className="active">HOME</a>
