@@ -2,6 +2,8 @@ import React from 'react';
 import GameItem from '../upcomingGames/gameItem/gameItem';
 import Title from '../blockTitle/blockTitle';
 
+import './upcomingGames.sass';
+
 export default function Games(): JSX.Element {
     return (
         <div className="games_block">

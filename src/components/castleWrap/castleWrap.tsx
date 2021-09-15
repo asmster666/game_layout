@@ -1,6 +1,8 @@
 import React from 'react';
 import CastleItem from './castleItem/castleItem';
 
+import './castleWrap.sass';
+
 const CastleWrap = () => {
     return (
         <div className="castle_block">

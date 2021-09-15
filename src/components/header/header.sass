@@ -1,1 +1,142 @@
 @import "_common.sass"
+
+header
+    .header_block1
+        background-color: rgb(41, 36, 110)
+        padding: 15px
+
+        .container_wrap
+            .logo-wrap
+                background-image: url('../../img/logo.png')
+                background-size: 100% 100%
+                background-repeat: no-repeat
+                max-width: 200px
+                min-height: 60px  
+            nav
+                color: #fff
+
+                a:hover 
+                    color: rgb(121, 210, 237)
+
+                .active
+                    color: rgb(121, 210, 237)
+
+                    &:hover 
+                        color: #fff
+
+            button
+                background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
+                border-radius: 50px
+                border-color: transparent
+                padding: 5px 15px
+                color: rgb(50, 46, 121)
+
+                &:hover, &:focus
+                    background: linear-gradient(to left, rgb(121, 210, 237), rgb(183, 251, 185))
+                    animation: background 3s infinite alternate
+
+    .header_block2
+        @mixin img-params 
+            background-size: cover
+            background-repeat: no-repeat
+        
+        @include img-params
+        width: 100%
+        display: block
+        background-image: url('../../img/banner/home-banner.jpg')
+        background-position: top
+        height: 500px
+
+        .container_wrap
+
+            .block_item1
+                .item1_img
+                    display: block
+                    @include img-params
+                    background-image: url('../../img/banner/home-left.png')
+                    background-position: top
+                    width: fit-content
+
+
+            .block_item2
+                color: #fff
+
+                &_title
+                    font-size: 22px
+                    line-height: 25px
+                &_btn-wrap
+                    display: flex
+                    align-items: center
+                    justify-content: flex-start
+
+                    button
+                        background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
+                        border-radius: 50px
+                        border-color: transparent
+                        height: 50px
+                        width: 50px
+                        animation: animate_pulse 1.5s infinite
+
+                        &:before
+                            content: '▶︎'
+                            position: absolute
+                            color: rgb(50, 46, 121)
+                            height: 50px
+                            width: 50px
+                            margin: -8px 0 0 -22px
+                        
+                        &:hover
+                            animation: none
+                    span
+                        margin-left: 15px
+                    
+                    @keyframes animate_pulse
+                        0% 
+                            box-shadow: 0 0 0 0 rgb(183, 251, 185, 0.4)
+                                        
+                        70% 
+                            box-shadow: 0 0 0 10px rgb(183, 251, 185, 0)
+                                        
+                        100% 
+                            box-shadow: 0 0 0 0 rgb(183, 251, 185, 0)
+    
+    @media screen and (min-width: 319px)
+        .header_block1
+            .container_wrap
+                display: flex
+                justify-content: space-between
+
+                nav
+                    display: none
+
+        .header_block2
+           .container_wrap  
+                display: flex
+                flex-direction: column
+
+                .block_item1
+                    margin: 20px auto 
+                .block_item2
+                    width: 80%
+                    margin: auto
+
+    @media screen and (min-width: 640px)
+        .header_block1
+            .container_wrap
+                nav
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    font-size: 14px
+                    line-height: 18px
+                    width: 60%
+        .header_block2
+            .container_wrap
+                display: flex
+                flex-direction: row
+                justify-content: space-evenly
+                padding-top: 150px
+
+                .block_item1, .block_item2
+                    width: 50%
+

@@ -6,12 +6,14 @@ const Reviews = () => {
     return (
         <div className="reviews_block">  
             <div className="reviews_container">
-                <div>
-                    <img alt="99"/>
+                <div className="review_info">
+                    <img src={'../../img/quote.png'} alt="99"/>
                     <p>Fanny Spencer</p>
                     <img alt="stars"/>
                 </div>
-                <div>ine 11:25:  The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element</div>
+                <div className="review_text">
+				As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face 
+                </div>
             </div>
         </div>
     )

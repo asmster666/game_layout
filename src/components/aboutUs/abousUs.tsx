@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './aboutUs.sass';
+
 const AboutUs = () => {
     return (
         <div className="about-us_container">

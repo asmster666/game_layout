@@ -1,6 +1,8 @@
 import React from 'react';
 import Title from '../blockTitle/blockTitle';
 
+import './gallery.sass';
+
 const Gallery = () => {
     return (
         <div className="gallery_block">

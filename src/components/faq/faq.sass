@@ -2,5 +2,14 @@
 
 .faq_block
     .questions_table
-        display: grid
-        grid-template-columns: auto auto 
+    
+    @media screen and (min-width: 319px)
+        .questions_table
+            width: 80%
+            margin: auto
+            display: grid
+            grid-template-columns: auto 
+    @media screen and (min-width: 640px)
+        .questions_table
+            width: 100%
+            grid-template-columns: auto auto

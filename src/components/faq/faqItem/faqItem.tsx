@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './faqItem.sass';
+
 export default function FaqItem(): JSX.Element {
     return (
         <div className="faq-item">

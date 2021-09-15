@@ -13,7 +13,6 @@ const Subscription = () => {
                     </div>
                     <div className="subscribe-right">
                         <input type="text" placeholder="Enter your email address" />
-                        <button></button>
                     </div>
                 </div>
             </div>
