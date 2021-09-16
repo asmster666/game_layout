@@ -1,2 +1,25 @@
 .castle_block
-    display: none
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    margin: auto
+
+    .castle_block-blue
+        width: 100%
+        background: rgb(50, 46, 121, 0.8)
+        padding: 30px 0
+
+        .choice-panel
+            box-sizing: border-box
+            display: flex
+            width: 100%
+            color: white
+            justify-content: space-between 
+
+            > div
+                box-sizing: border-box
+                padding: 10px 15px
+
+        .active
+            background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
+            color: rgb(50, 46, 121)

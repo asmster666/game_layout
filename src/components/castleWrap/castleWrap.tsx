@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CastleItem from './castleItem/castleItem';
 
 import './castleWrap.sass';
 
-const CastleWrap = () => {
+export default function CastleWrap() {
+
+    
+
     return (
         <div className="castle_block">
             <div className="castle_block-blue">
                 <div className="container_wrap">
                     <div className="choice-panel">
-                        <div className="active">Live Streaming</div>
-                        <div>Upcoming Challenges</div>
-                        <div>Recent Famous Games</div>
+                        <ActiveTab />
                     </div>
                     <CastleItem />
                 </div>
@@ -20,4 +21,22 @@ const CastleWrap = () => {
     )
 }
 
-export default CastleWrap;
+function ActiveTab():JSX.Element {
+
+    let arr: string[] = ['Live Streaming', 'Upcoming Challenges', 'Recent Famous Games'];
+
+    const [isActive, setIsActive] = useState(false)
+
+    return (
+        <div className="choice-panel">
+            {
+                arr.map((item:string, idx) => {
+                    return <div key={idx} 
+                        className={isActive ? "active" : ""}
+                        onClick={() => setIsActive(!isActive)}
+                        >{item}</div>
+                })
+            }
+        </div>
+    )
+}

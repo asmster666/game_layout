@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './castleItem.sass';
+
 export default function CastleItem(): JSX.Element {
     return (
         <div className="castleItem">

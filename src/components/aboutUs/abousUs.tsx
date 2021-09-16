@@ -4,9 +4,9 @@ import './aboutUs.sass';
 
 const AboutUs = () => {
     return (
-        <div className="about-us_container">
+        <div className="about-us_block">
             <div className="container_wrap">
-                <div className="block_blue-color">
+                <div className="block_purple-color">
                     <div>ABOUT US</div>
                     <h2>We Believe that Interior beauty Lasts Long</h2>
                     <p>
