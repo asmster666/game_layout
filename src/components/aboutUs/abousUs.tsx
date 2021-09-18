@@ -3,11 +3,11 @@ import React from 'react';
 import './aboutUs.sass';
 
 const AboutUs = () => {
-    return (
+    return ( 
         <div className="about-us_block">
-            <div className="container_wrap">
+            <div className="container_wrap"> 
                 <div className="block_purple-color">
-                    <div>ABOUT US</div>
+                    <div className="underline">ABOUT US</div>
                     <h2>We Believe that Interior beauty Lasts Long</h2>
                     <p>
                     inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that as women.

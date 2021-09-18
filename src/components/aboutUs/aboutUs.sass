@@ -1,5 +1,50 @@
 .about-us_block
     box-sizing: border-box
 
-    .block_purple-color
-        box-sizing: border-box
+    .container_wrap
+        display: flex
+
+        .block_purple-color
+            box-sizing: border-box
+            background-color: rgb(50, 46, 121)
+            color: #fff
+            padding: 25px 30px
+
+            .underline
+                padding-bottom: 20px
+                border-bottom: 2px solid green
+
+            button
+                border-radius: 10px
+                padding: 15px 25px
+                color: rgb(50, 46, 121)
+                background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
+                cursor: pointer
+                margin: 20px 0
+
+                &:hover, &:focus
+                    background: linear-gradient(to left, rgb(121, 210, 237), rgb(183, 251, 185))
+                    animation: background 3s infinite alternate
+    
+    @media screen and (min-width: 319px)
+        flex-direction: column
+
+        .container_wrap
+            width: 80% 
+            margin: 15px auto
+
+            .block_purple-color
+                .underline
+                    width: 40%
+
+    @media screen and (min-width: 640px)
+        flex-direction: row
+
+        .container_wrap
+            .block_purple-color
+                width: 80%
+                margin-left: 0
+
+                .underline
+                    width: 20%
+
