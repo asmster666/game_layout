@@ -8,23 +8,39 @@
             box-sizing: border-box
             background-color: rgb(50, 46, 121)
             color: #fff
-            padding: 25px 30px
+            padding: 80px 50px
+            position: relative
+            z-index: 1
 
-            .underline
-                padding-bottom: 20px
-                border-bottom: 2px solid green
+            .text-wrap
+                .underline
+                    padding-bottom: 20px
+                    border-bottom: 2px solid green
 
-            button
-                border-radius: 10px
-                padding: 15px 25px
-                color: rgb(50, 46, 121)
-                background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
-                cursor: pointer
-                margin: 20px 0
+                h2
+                    font-size: 25px
+                    line-height: 30px
 
-                &:hover, &:focus
-                    background: linear-gradient(to left, rgb(121, 210, 237), rgb(183, 251, 185))
-                    animation: background 3s infinite alternate
+                button
+                    border-radius: 10px
+                    padding: 15px 25px
+                    color: rgb(50, 46, 121)
+                    background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
+                    cursor: pointer
+                    margin: 20px 0
+
+                    &:hover, &:focus
+                        background: linear-gradient(to left, rgb(121, 210, 237), rgb(183, 251, 185))
+                        animation: background 3s infinite alternate
+        .img-wrap
+            position: relative
+            z-index: 2
+            width: fit-content
+            display: flex
+            align-items: center
+
+            img
+                max-width: 500px
     
     @media screen and (min-width: 319px)
         flex-direction: column
@@ -34,17 +50,25 @@
             margin: 15px auto
 
             .block_purple-color
-                .underline
-                    width: 40%
+                .text-wrap
+                    .underline
+                        width: 40%
 
     @media screen and (min-width: 640px)
         flex-direction: row
+        align-items: center
 
         .container_wrap
             .block_purple-color
                 width: 80%
                 margin-left: 0
 
-                .underline
-                    width: 20%
+                .text-wrap
+                    width: 45%
+                    margin-left: 0
+
+                    .underline
+                        width: 20%
+            .img-wrap 
+                margin-left: -20%
 

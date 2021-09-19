@@ -1,18 +1,28 @@
 .game_item
     box-sizing: border-box
-    border: 1px solid blue
     border-radius: 80px
-    height: 200px
-    display: flex
-    align-items: center
+    height: fit-content
+
+    &-img
+        position: relative
+        z-index: 1
+        width: 100%
+
+        img 
+            width: 100%
+            background-size: contain
+            background-repeat: no-repeat
+
 
     &-backgr
         background-color: rgb(50, 46, 121)
         color: #fff
         padding: 10px 5px
-        width: 100%
         cursor: pointer
         text-align: center
+        position: relative
+        z-index: 2
+        margin-top: -90%
 
         &:hover, &:focus
             background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Logo from "../../img/logo.png";
+import BlockAbstraction from '../../img/banner/home-left.png';
 import './header.sass';
 
 export default function Header(): JSX.Element {
@@ -8,7 +10,7 @@ export default function Header(): JSX.Element {
             <div className="header_block1">
                 <div className="container_wrap">
                     <div className="logo-wrap">
-                        <img src="../../img/logo.png" alt="header_logo"/>
+                        <img src={Logo} alt="header_logo"/>
                     </div>
                     <nav>
                         <a className="active"><strong>HOME</strong></a>
@@ -24,7 +26,9 @@ export default function Header(): JSX.Element {
             <div className="header_block2">
                 <div className="container_wrap">
                     <div  className="block_item1">
-                        <div className="item1_img"></div>
+                        <div className="item1_img">
+                            <img src={BlockAbstraction} alt="abstraction"/>
+                        </div>
                     </div>
                     <div className="block_item2">
                         <div className="block_item2_title"><strong>For All Occasion Hairstyle is a Must Try Fashion</strong></div>

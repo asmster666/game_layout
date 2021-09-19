@@ -7,11 +7,8 @@ header
 
         .container_wrap
             .logo-wrap
-                background-image: url('../../img/logo.png')
-                background-size: 100% 100%
-                background-repeat: no-repeat
-                max-width: 200px
-                min-height: 60px  
+                img 
+                    max-width: 200px
             nav
                 color: #fff
 
@@ -52,11 +49,10 @@ header
 
             .block_item1
                 .item1_img
-                    display: block
                     @include img-params
-                    background-image: url('../../img/banner/home-left.png')
                     background-position: top
                     width: fit-content
+                    max-width: 400px
 
 
             .block_item2
