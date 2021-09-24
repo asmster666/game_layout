@@ -1,4 +1,4 @@
-@import "_common.sass"
+@import '_common.sass'
 
 .subscribe_block
     background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
@@ -24,7 +24,7 @@
                 padding: 15px
                 width: 100%
     
-    @media screen and (min-width: 319px)
+    @media screen and (min-width: $mobile)
         .subscribe_wrap
             flex-direction: column
             align-items: center
@@ -35,7 +35,7 @@
                 margin: auto
             .subscribe-left
                 text-align: center
-    @media screen and (min-width: 640px)
+    @media screen and (min-width: $table)
         .subscribe_wrap
             flex-direction: row
             align-items: center

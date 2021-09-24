@@ -4,7 +4,7 @@ import Title from '../blockTitle/blockTitle';
 
 import './faq.sass';
 
-export default function Faq() {
+export default function Faq(): JSX.Element {
 
     const [arr, setArr] = useState(Array(6).fill(null));
 
@@ -13,7 +13,7 @@ export default function Faq() {
             <div className="container_wrap">
                 <Title text={'Frequently Asked Questions'} />
                 <div className="questions_table">
-                    { arr.map(elem => <FaqItem />) }
+                    { arr.map((elem, i) => <FaqItem key={i} />) }
                 </div>
             </div>
         </div>

@@ -3,13 +3,13 @@
 .faq_block
     .questions_table
     
-    @media screen and (min-width: 319px)
+    @media screen and (min-width: $mobile)
         .questions_table
             width: 80%
             margin: auto
             display: grid
             grid-template-columns: auto 
-    @media screen and (min-width: 640px)
+    @media screen and (min-width: $table)
         .questions_table
             width: 100%
             grid-template-columns: auto auto
