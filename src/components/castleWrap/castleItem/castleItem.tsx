@@ -1,11 +1,12 @@
 import React from 'react';
+import Knight from '../../../img/recent_up.png';
 
 import './castleItem.sass';
 
 export default function CastleItem(): JSX.Element {
     return (
         <div className="castleItem">
-            <img alt="knight"/>
+            <img src={Knight} alt="knight"/>
             <div className="castleItem_wrap">
                 <div>ABOUT US</div>
                 <h2>We Believe that Interior beauty Lasts Long</h2>

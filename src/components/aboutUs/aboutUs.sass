@@ -10,7 +10,6 @@
             box-sizing: border-box
             background-color: rgb(50, 46, 121)
             color: #fff
-            padding: 80px 50px
             position: relative
             z-index: 1
 
@@ -52,9 +51,14 @@
             margin: 15px auto
 
             .block_purple-color
+                padding: 15px
+                
                 .text-wrap
                     .underline
                         width: 40%
+            .img-wrap
+                display: none
+
 
     @media screen and (min-width: $table)
         flex-direction: row
@@ -62,15 +66,18 @@
 
         .container_wrap
             .block_purple-color
-                width: 80%
+                width: 100%
                 margin-left: 0
+                padding: 30px
 
                 .text-wrap
-                    width: 45%
+                    width: 70%
                     margin-left: 0
 
-                    .underline
-                        width: 20%
             .img-wrap 
+                display: flex
                 margin-left: -20%
+
+                img 
+                    max-width: 300px
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Quote from '../../img/quote.png';
 
 import './reviews.sass';
 
@@ -7,7 +8,7 @@ const Reviews = () => {
         <div className="reviews_block">  
             <div className="reviews_container">
                 <div className="review_info">
-                    <img src={'../../img/quote.png'} alt="99"/>
+                    <img src={Quote} alt="99"/>
                     <p>Fanny Spencer</p>
                     <img alt="stars"/>
                 </div>

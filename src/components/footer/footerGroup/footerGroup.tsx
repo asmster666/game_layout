@@ -7,7 +7,7 @@ const FooterGroup = (props: {name: string, arr: string[]}) => {
         <div className="footer-group">
             <div className="footer-group_name">{props.name}</div>
             <ul>
-                {props.arr.map(item => <li>{item}</li>)}
+                {props.arr.map((item, i) => <li key={i}>{item}</li>)}
             </ul>
         </div>
     )

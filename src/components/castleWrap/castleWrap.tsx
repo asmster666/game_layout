@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CastleItem from './castleItem/castleItem';
+import Castle from '../../img/blog_img3.png';
 
 import './castleWrap.sass';
 
@@ -9,11 +10,10 @@ export default function CastleWrap() {
 
     return (
         <div className="castle_block">
+            <img src={Castle} alt="castleBack"/>
             <div className="castle_block-blue">
                 <div className="container_wrap">
-                    <div className="choice-panel">
-                        <ActiveTab />
-                    </div>
+                    <ActiveTab />
                     <CastleItem />
                 </div>
             </div>
