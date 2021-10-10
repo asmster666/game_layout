@@ -1,5 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FooterGroup from './footerGroup/footerGroup';
+
+import Fb from "../../img/facebook-64.png";
+import Twit from "../../img/twitter-64.png";
+import Be from "../../img/behance-64.png";
+import Github from "../../img/github-6-64.png";
 
 import './footer.sass';
 
@@ -21,11 +26,19 @@ const Footer = () => {
                 <div className="rights">
                     <div>Copyright.2021 All rights reserved</div>
                     <div className="socials">
-                        <img alt="fb"/>
-                        <img alt="twit"/>
-                        <img alt="cr"/>
-                        <img alt="be"/>
-                    </div>
+                        <div>
+                            <img src={Fb} alt="fb"/>
+                        </div>
+                        <div>
+                            <img src={Twit} alt="twitter"/>
+                        </div>
+                        <div>
+                            <img src={Github} alt="github"/>
+                        </div>
+                        <div>
+                            <img src={Be} alt="behance"/>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </footer>

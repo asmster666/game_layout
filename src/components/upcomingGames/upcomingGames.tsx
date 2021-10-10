@@ -9,15 +9,44 @@ import Game4 from '../../img/b_map4.png';
 import './upcomingGames.sass';
 
 export default function Games(): JSX.Element {
-    return (
+
+    interface GameParams {
+        img: any,
+        text: string
+    }
+
+    const gamesInfo = [
+        {
+            img: Game1,
+            text: 'Best Ps4 Games',
+        },
+        {
+            img: Game2,
+            text: 'World Dart 2019',
+        },
+        {
+            img: Game3,
+            text: 'New XBox Games',
+        },
+        {
+            img: Game4,
+            text: 'American Football',
+        },
+    ] as GameParams[]
+
+    return ( 
         <div className="games_block">
             <div className="container_wrap">
                 <Title text={'Upcoming Games'} /> 
                 <div className="games_wrap">
-                    <GameItem img={Game1} text={'Best Ps4 Games'} />
-                    <GameItem img={Game2} text={'World Dart 2019'} />
-                    <GameItem img={Game3} text={'New XBox Games'} />
-                    <GameItem img={Game4} text={'American Football'} />
+                    {
+                        gamesInfo.map((game, i) => {
+
+                            return (
+                                <GameItem key={i} img={game.img} text={game.text} />
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>

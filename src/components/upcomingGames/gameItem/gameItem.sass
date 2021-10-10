@@ -2,29 +2,27 @@
 
 .game_item
     box-sizing: border-box
-    border-radius: 80px
     height: fit-content
 
-    &-img
+    img 
+        width: 100%
+        background-size: 100% auto
+        background-repeat: no-repeat
+        max-width: 200px
         position: relative
         z-index: 1
-        width: 100%
-
-        img 
-            width: 100%
-            background-size: contain
-            background-repeat: no-repeat
 
 
     &-backgr
         background-color: rgb(50, 46, 121)
         color: #fff
-        padding: 10px 5px
+        padding: 10px 0
         cursor: pointer
         text-align: center
-        position: relative
+        position: absolute
         z-index: 2
-        margin-top: -90%
+        width: inherit
+        margin-top: -32%
 
         &:hover, &:focus
             background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
@@ -32,11 +30,18 @@
     
     @media screen and (min-width: $mobile)
         width: 40%
-        margin: 0 auto 80px
+        margin: 0 auto
+
+        &:not(:first-child)
+            margin-top: 30px
             
     @media screen and (min-width: $table)
         width: 20%
 
+        &:not(:first-child)
+            margin-top: 0
+
         &-backgr
-            padding: 20px 5px
-            margin-top: -85%
+            padding: 20px 0
+            max-width: 200px
+            margin-top: -12%

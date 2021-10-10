@@ -32,6 +32,29 @@ header
                 &:hover, &:focus
                     background: linear-gradient(to left, rgb(121, 210, 237), rgb(183, 251, 185))
                     animation: background 3s infinite alternate
+            
+            @mixin burger 
+                background-size: 100% auto
+                max-width: 50px
+                cursor: pointer
+                margin: 0 10px
+
+            .burger_menu
+                background-image: url("../../img/menu-4-64.png")
+                @include burger
+
+            .burg-cross
+                @include burger
+                &:before    
+                    content: 'X'
+                    display: block
+                    position: absolute
+                    background-color: transparent
+                    text-align: center
+                    font-size: 32px
+                    color: #fff
+
+
 
     .header_block2
         @mixin img-params 
@@ -45,7 +68,7 @@ header
         background-position: top
         height: 500px
 
-        .container_wrap
+        .container_wrap 
 
             .block_item1
                 .item1_img
@@ -108,9 +131,24 @@ header
 
                 nav
                     display: none
+                
+                .burger_menu, .burg-cross
+                    display: flex
+                    align-self: center
+                    width: 30px
+                    height: 30px
+                
+                .burg-cross
+                    &:before
+                        margin-top: -5px
+                        width: 30px
+                        height: 30px
+
 
         .header_block2
-           .container_wrap  
+            height: auto
+
+            .container_wrap  
                 display: flex
                 flex-direction: column
 
@@ -119,6 +157,9 @@ header
                 .block_item2
                     width: 80%
                     margin: auto
+
+                    &_btn-wrap
+                        margin: 15px 0 30px
 
     @media screen and (min-width: $table)
         .header_block1
@@ -130,6 +171,9 @@ header
                     font-size: 14px
                     line-height: 18px
                     width: 60%
+                .burger_menu
+                    display: none
+
         .header_block2
             .container_wrap
                 display: flex

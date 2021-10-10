@@ -13,7 +13,7 @@ const PriceItem = (props: {name: string, price: number, active: boolean}) => {
                 <li>Basic hair Cut</li>
             </ul>
             <div className="border-wrap">
-                <button className={props.active ? "active" : ""} >ORDER NOW</button>
+                <div className={props.active ? "active button" : "button"} >ORDER NOW</div>
             </div>
         </div>
     )

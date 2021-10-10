@@ -2,18 +2,13 @@ $mobile: 319px
 $table: 640px
 $desktop: 1200px
 
-@mixin min-width($size)
-    @media screen and (min-width: $size)
-        @content
-
-
 .container_wrap
     box-sizing: border-box
-    @mixin min-width($mobile)
+    @media screen and (min-width: $mobile)
         width: 100%
-    @mixin min-width($table)
+    @media screen and (min-width: $table)
         width: 80%
         margin: auto
-    @mixin min-width($desktop)
-        width: 60%
+    @media screen and (min-width: $desktop)
+        width: 75%
         margin: auto

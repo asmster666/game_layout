@@ -1,23 +1,18 @@
+@import "_common.sass"
+
 .castle_block
     box-sizing: border-box
-    display: flex
+    display: none
     flex-direction: column
-    margin: auto
-    position: relative
-    z-index: 1
-
-    > img 
-        display: block
-        margin: auto
-        width: 100%
-        max-height: 440px
+    background-image: url("../../img/blog_img3.png")
+    background-size: 100% auto
+    width: 100%
+    background-position: center
 
     .castle_block-blue
         width: 100%
         background: rgb(50, 46, 121, 0.8)
-        padding: 30px 0
-        position: absolute
-        z-index: 2
+        padding: 50px 0
 
         .container_wrap
             .choice-panel
@@ -31,12 +26,45 @@
                 width: calc(100% - 30px)
                 margin-left: 15px
 
-                > div
+                .panel-wrap
+                    cursor: pointer
                     box-sizing: border-box
-                    padding: 10px 15px
+                    padding: 20px 15px
                     width: calc(30% + 20px)
                     text-align: center
+                    position: relative
+                    background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185)) 
 
-            .active
-                background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
-                color: rgb(50, 46, 121)
+                    &_item
+                        background-color: rgb(50, 46, 121)
+                        position: absolute
+                        margin: -18px -14px
+                        padding: 9px 0
+                        width: calc(100% - 4px)
+
+                        &:hover, &:focus
+                            background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
+                            color: rgb(50, 46, 121)
+                            border-color: transparent
+
+                .active
+                    background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
+                    color: rgb(50, 46, 121)
+    
+    @media screen and (min-width: 319px)
+        margin: 50px auto 0
+
+        .container_wrap
+            .choice-panel
+                font-size: 12px
+                .panel-wrap
+                    padding: 20px 10px 
+                    width: calc(30% + 10px) 
+
+                    &_item  
+                        padding: 4px 0 
+
+                    &:not(:last-child)
+                        margin-right: 5px  
+    @media screen and (min-width: $desktop)
+

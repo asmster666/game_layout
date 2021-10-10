@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BurgerMenu from '../burgerMenu/burgerMenu';
 
 import Logo from "../../img/logo.png";
 import BlockAbstraction from '../../img/banner/home-left.png';
 import './header.sass';
 
 export default function Header(): JSX.Element {
+
+    const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+
     return (
         <header>
             <div className="header_block1">
@@ -21,7 +25,12 @@ export default function Header(): JSX.Element {
                         <a><strong>CONTACT</strong></a>
                     </nav>
                     <button>JOIN US</button>
+                    <div 
+                        className={isBurgerOpen ? "burg-cross" : "burger_menu"}
+                        onClick={() => setIsBurgerOpen(!isBurgerOpen)}
+                    ></div>
                 </div>
+                <BurgerMenu isOpen={isBurgerOpen} />
             </div>
             <div className="header_block2">
                 <div className="container_wrap">
