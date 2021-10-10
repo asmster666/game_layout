@@ -7,7 +7,8 @@ import './header.sass';
 
 export default function Header(): JSX.Element {
 
-    const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isBurger, setIsBurger] = useState(true);
 
     return (
         <header>
@@ -16,21 +17,16 @@ export default function Header(): JSX.Element {
                     <div className="logo-wrap">
                         <img src={Logo} alt="header_logo"/>
                     </div>
-                    <nav>
-                        <a className="active"><strong>HOME</strong></a>
-                        <a><strong>ABOUT</strong></a>
-                        <a><strong>GALLERY</strong></a>
-                        <a><strong>PAGES</strong></a>
-                        <a><strong>BLOG</strong></a>
-                        <a><strong>CONTACT</strong></a>
-                    </nav>
+                    <Menu isBurger={!isBurger} />
                     <button>JOIN US</button>
                     <div 
-                        className={isBurgerOpen ? "burg-cross" : "burger_menu"}
-                        onClick={() => setIsBurgerOpen(!isBurgerOpen)}
+                        className={isOpen ? "burg-cross" : "burger_menu"}
+                        onClick={() => setIsOpen(!isOpen)}
                     ></div>
                 </div>
-                <BurgerMenu isOpen={isBurgerOpen} />
+                <div className={isOpen ? "" : "hide-burger"}>
+                    <Menu isBurger={isBurger} />
+                </div>
             </div>
             <div className="header_block2">
                 <div className="container_wrap">
@@ -53,5 +49,22 @@ export default function Header(): JSX.Element {
                 </div>
             </div>
         </header>
+    )
+}
+
+export function Menu(props: {isBurger: boolean}):JSX.Element {
+
+    const menuOption = ['HOME', 'ABOUT', 'GALLERY', 'PAGES', 'BLOG', 'CONTACT']
+
+    return (
+        <div className={props.isBurger ? "burger" : "nav"}>
+            {
+                menuOption.map((option, i) => {
+                    return (
+                        <a key={i}><strong>{option}</strong></a>
+                    )
+                })
+            }
+        </div>
     )
 }
