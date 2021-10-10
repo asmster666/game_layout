@@ -22,15 +22,14 @@ header
                         color: #fff
 
             button
-                background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
+                @include active-class
                 border-radius: 50px
                 border-color: transparent
                 padding: 5px 15px
                 cursor: pointer
-                color: rgb(50, 46, 121)
 
                 &:hover, &:focus
-                    background: linear-gradient(to left, rgb(121, 210, 237), rgb(183, 251, 185))
+                    background: $gradient
                     animation: background 3s infinite alternate
             
             @mixin burger 
@@ -93,7 +92,7 @@ header
                     justify-content: flex-start
 
                     button
-                        background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
+                        background: $gradient
                         border-radius: 50px
                         border-color: transparent
                         height: 50px

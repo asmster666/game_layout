@@ -10,8 +10,7 @@
             flex-direction: column
             margin: 15px auto
         @media screen and (min-width: $table)
-            flex-direction: row
-            justify-content: space-evenly 
+            @include row-evenly_params
             margin-bottom: 60px
         @media screen and (min-width: $desktop)
             margin-bottom: 0

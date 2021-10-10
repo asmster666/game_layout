@@ -2,6 +2,8 @@ $mobile: 319px
 $table: 640px
 $desktop: 1200px
 
+$gradient: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
+
 .container_wrap
     box-sizing: border-box
     @media screen and (min-width: $mobile)
@@ -12,3 +14,24 @@ $desktop: 1200px
     @media screen and (min-width: $desktop)
         width: 75%
         margin: auto
+
+@mixin desktop-view_params
+    flex-direction: row
+    justify-content: space-between
+@mixin vertical-view_params
+    flex-direction: column
+    align-items: center
+@mixin hover_params
+    background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
+    color: rgb(50, 46, 121)
+    border-color: transparent
+@mixin active-class
+    background: $gradient
+    color: rgb(50, 46, 121)
+@mixin row-evenly_params
+    flex-direction: row
+    justify-content: space-evenly 
+@mixin pics-view_params 
+    width: 100%
+    background-size: 100% auto
+    background-repeat: no-repeat

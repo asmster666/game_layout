@@ -5,8 +5,7 @@
     display: none
     flex-direction: column
     background-image: url("../../img/blog_img3.png")
-    background-size: 100% auto
-    width: 100%
+    @include pics-view_params 
     background-position: center
 
     .castle_block-blue
@@ -16,11 +15,11 @@
 
         .container_wrap
             .choice-panel
-                box-sizing: border-box
                 display: flex
+                @include desktop-view_params
+                box-sizing: border-box
                 width: 100%
                 color: white
-                justify-content: space-between 
                 position: relative
                 z-index: 3
                 width: calc(100% - 30px)
@@ -33,7 +32,7 @@
                     width: calc(30% + 20px)
                     text-align: center
                     position: relative
-                    background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185)) 
+                    background: $gradient
 
                     &_item
                         background-color: rgb(50, 46, 121)
@@ -43,13 +42,10 @@
                         width: calc(100% - 4px)
 
                         &:hover, &:focus
-                            background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
-                            color: rgb(50, 46, 121)
-                            border-color: transparent
+                            @include hover_params
 
                 .active
-                    background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
-                    color: rgb(50, 46, 121)
+                    @include active-class
     
     @media screen and (min-width: 319px)
         margin: 50px auto 0

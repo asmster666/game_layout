@@ -5,9 +5,7 @@
     height: fit-content
 
     img 
-        width: 100%
-        background-size: 100% auto
-        background-repeat: no-repeat
+        @include pics-view_params 
         max-width: 200px
         position: relative
         z-index: 1
@@ -25,8 +23,7 @@
         margin-top: -32%
 
         &:hover, &:focus
-            background: linear-gradient(to right, rgb(121, 210, 237), rgb(183, 251, 185))
-            color: rgb(50, 46, 121)
+            @include hover_params
     
     @media screen and (min-width: $mobile)
         width: 40%

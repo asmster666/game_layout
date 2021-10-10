@@ -1,10 +1,8 @@
 @import "_common.sass"
 
 .reviews_block
-    width: 100%
     background-image: url('../../img/testimonial_bg.png')
-    background-size: 100% 100%
-    background-repeat: no-repeat
+    @include pics-view_params 
     color: #fff
     padding: 20px 0
     height: 50vh
@@ -14,8 +12,7 @@
     .reviews_container
         height: 100%
         display: flex
-        flex-direction: column
-        align-items: center
+        @include vertical-view_params
         justify-content: center
 
     .review_text, .review_info

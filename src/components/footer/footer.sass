@@ -49,8 +49,7 @@ footer
                     flex-direction: column
 
             .rights
-                flex-direction: column
-                align-items: center
+                @include vertical-view_params
 
                 .socials
                     margin: 10px auto 0
@@ -63,16 +62,13 @@ footer
 
         @media screen and (min-wdith: $table)
             .footer-groups_wrap 
-                flex-direction: row
-                justify-content: space-between
+                @include desktop-view_params
 
                 .footer-groups_item1, .footer-groups_item2
-                    flex-direction: row
-                    justify-content: space-evenly
+                    @include row-evenly_params
 
             .rights
-                flex-direction: row
-                justify-content: space-between
+                @include desktop-view_params
 
                 .socials
                     margin-top: 0
