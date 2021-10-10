@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import BurgerMenu from '../burgerMenu/burgerMenu';
 
 import Logo from "../../img/logo.png";
 import BlockAbstraction from '../../img/banner/home-left.png';
@@ -52,7 +51,7 @@ export default function Header(): JSX.Element {
     )
 }
 
-export function Menu(props: {isBurger: boolean}):JSX.Element {
+function Menu(props: {isBurger: boolean}):JSX.Element {
 
     const menuOption = ['HOME', 'ABOUT', 'GALLERY', 'PAGES', 'BLOG', 'CONTACT']
 
